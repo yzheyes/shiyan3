@@ -1,0 +1,40 @@
+
+
+Protocol 6.   Events: 50000    Parameters: 50 15 5
+
+Process 0:
+	Total data frames sent:       6409
+	Data frames lost:             1034
+	Data frames not lost:         5375
+	Frames retransmitted:         1384
+	Good ack frames rec'd:          93
+	Bad ack frames rec'd:            6
+
+	Good data frames rec'd:       5157
+	Bad data frames rec'd:         263
+	Payloads accepted:            4440
+	Total ack frames sent:         116
+	Ack frames lost:                20
+	Ack frames not lost:            96
+	Timeouts:                     1384
+	Ack timeouts:                  116
+
+Process 1:
+	Total data frames sent:       6466
+	Data frames lost:             1045
+	Data frames not lost:         5421
+	Frames retransmitted:         1407
+	Good ack frames rec'd:          94
+	Bad ack frames rec'd:            2
+
+	Good data frames rec'd:       5109
+	Bad data frames rec'd:         266
+	Payloads accepted:            4417
+	Total ack frames sent:         120
+	Ack frames lost:                21
+	Ack frames not lost:            99
+	Timeouts:                     1407
+	Ack timeouts:                  120
+
+Efficiency (payloads accepted/data pkts sent) = 68%
+End of simulation.  Time=50000
