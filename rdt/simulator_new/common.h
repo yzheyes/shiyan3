@@ -19,7 +19,9 @@ extern int protocol;			/* protocol we are simulating */
 extern bigint timeout_interval;	/* timeout interval in ticks */
 extern int pkt_loss;			/* controls packet loss rate: 0 to 990 */
 extern int garbled;			/* control cksum error rate: 0 to 990 */
-extern int debug_flags;		/* debug flags */ 
+extern int debug_flags;		/* debug flags */
+extern int base_delay;		/* base packet delivery delay in ticks */
+extern int delay_variance;		/* variance in packet delivery delay */
 
 /* File descriptors for pipes. */
 extern int r1, w1, r2, w2, r3, w3, r4, w4, r5, w5, r6, w6;

@@ -22,8 +22,6 @@ bigint timeout_interval;
 int pkt_loss;
 int garbled;
 int debug_flags;
-int base_delay = 0;
-int delay_variance = 0;
 int r1, w1, r2, w2, r3, w3, r4, w4, r5, w5, r6, w6;
 int id;
 bigint zero;
@@ -166,23 +164,9 @@ int parse_args(int argc, char *argv[])
 	printf("Debug flags may not be negative\n", debug_flags);
 	return(-1);
   }
-  
-  /* Optional parameters for variable delay (Experiment 6) */
-  if (argc > 7) {
-	base_delay = atoi(argv[7]);
-	if (base_delay < 0) base_delay = 0;
-  }
-  if (argc > 8) {
-	delay_variance = atoi(argv[8]);
-	if (delay_variance < 0) delay_variance = 0;
-  }
-  
   printf("\n\nProtocol %d.   Events: %u    Parameters: %u %d %u\n", protocol,
       last_tick/DELTA, timeout_interval/DELTA, pkt_loss/10, garbled/10,
 								debug_flags);
-  if (base_delay > 0 || delay_variance > 0) {
-	printf("Variable Delay: base=%d, variance=%d\n", base_delay, delay_variance);
-  }
   return(0);			/* no errors in command line parameters */
 }
 
